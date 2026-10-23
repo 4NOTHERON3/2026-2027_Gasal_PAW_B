@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+</head>
+<body>
+  <fieldset>
+    <legend>Person Details</legend>
+    <form name="myForm" action="processData.php" method="POST">
+      <div>
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname" size="31"/>
+      </div>
+      <div>
+        <label for="email">Email address</label>
+        <input type="text" id="email" name="email" size="31"/>
+      </div>
+      <div>
+        <label for="passwd">Password</label>
+        <input type="password" id="passwd" name="passwd" size="31"/>
+      </div>
+      <div>
+        <label for="address">Street Address</label>
+        <textarea id="address" name="address" rows="3" cols="22"></textarea>
+      </div>
+      <div>
+        <label for="state">State</label>
+        <select id="state" name="state">
+          <option value="-1" selected>[choose your state]</option>
+          <option value="1">Australian Capital Territory</option>
+          <option value="2">Queensland</option>
+          <option value="3">Victoria</option>
+          <option value="4">New South Wales</option>
+          <option value="5">Tasmania</option>
+          <option value="6">South Australia</option>
+          <option value="7">Western Australia</option>
+          <option value="8">Northern Territory</option>
+        </select>
+      </div>
+      <div>
+        <input type="hidden" name="country" value="Australia"/>
+      </div>
+      <div>
+        <label for="sex">Gender</label>
+        <input type="radio" name="sex" value="male"/>Male
+        <input type="radio" name="sex" value="female"/>Female
+      </div>
+      <div>
+        <label for="vegetarian">Vegetarian?</label>
+        <input type="checkbox" id="vegetarian" name="vegetarian"/>
+      </div>
+      <div>
+        <label>&nbsp;</label>
+        <input type="submit" value="Submit" name="submit"/><input type="reset" value="Reset" name="reset"/>
+      </div>
+    </form>
+  </fieldset>
+</body>
+</html>
+
+<!-- 4.3.1
+
+Soal 3
+Uji form dengan surname benar dan salah. Amati dan jelaskan apa yang terjadi.
+Jawab:
+- Surname benar (mis. `Smith`, `O'Brien`): tampil Data OK!.
+- Surname salah (mis. `Smith123`, atau mengandung spasi karena pola tidak mengizinkan spasi): tampil Data invalid!.
+- Kekurangannya: hanya diketahui valid atau tidak, tanpa alasan.
+
+Soal 6
+Uji kembali dengan surname benar dan salah. Jelaskan, dan apa bedanya dengan pengujian Langkah #3?
+Jawab:
+- Benar: Data OK!. Kosong: `surname required`. Format salah: `surname invalid`.
+- Beda dengan Langkah 3: pesan error sekarang rinci (field mana dan jenis kesalahannya), sedangkan Langkah 3 hanya menampilkan valid atau tidak. -->
+
