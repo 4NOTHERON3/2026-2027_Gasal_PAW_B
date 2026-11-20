@@ -2,7 +2,7 @@
 require_once 'auth.php';
 wajib_owner();
 
-// ===== PROSES (tambah / ubah / hapus) =====
+// PROSES (tambah / ubah / hapus)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $aksi   = $_POST['aksi'] ?? '';
     $id     = (int)($_POST['id'] ?? 0);

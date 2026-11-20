@@ -2,7 +2,7 @@
 require_once 'auth.php';
 wajib_owner();
 
-// ===== PROSES (tambah / ubah / hapus) =====
+// PROSES (tambah / ubah / hapus) 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $aksi     = $_POST['aksi'] ?? '';
     $id       = (int)($_POST['id'] ?? 0);
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
-// ===== TAMPILAN =====
+//  TAMPILAN 
 $aksi = $_GET['aksi'] ?? 'list';
 $d = ['id_user' => '', 'username' => '', 'nama' => '', 'alamat' => '', 'hp' => '', 'level' => ''];
 

@@ -1,8 +1,8 @@
 <?php
 require_once 'auth.php';
-wajib_login(); // owner dan kasir boleh
+wajib_login(); // owner dan kasir
 
-// ===== PROSES SIMPAN TRANSAKSI =====
+//  PROSES SIMPAN TRANSAKSI 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pel = $_POST['pelanggan_id'] ?? '';
     $tgl = $_POST['waktu_transaksi'] ?? '';
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
-// ===== TAMPILAN =====
+//  TAMPILAN 
 $aksi = $_GET['aksi'] ?? 'list';
 $t = null;
 if ($aksi === 'detail') {
